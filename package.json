@@ -1,0 +1,19 @@
+{
+  "name": "teste_technofit",
+  "version": "1.0.0",
+  "description": "Teste da Technofit",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/augribeiro/teste_technofit.git"
+  },
+  "author": "Augusto Ribeiro de Oliveira",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/augribeiro/teste_technofit/issues"
+  },
+  "homepage": "https://github.com/augribeiro/teste_technofit#readme"
+}
