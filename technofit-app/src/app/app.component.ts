@@ -7,7 +7,7 @@ import { LoginRequestModel } from './model/login-request.model';
 @Component({
   selector: 'tf-root',
   templateUrl: './app.component.html',
-  styleUrls: ['./app.component.sass'],
+  styleUrls: ['./app.component.scss'],
 })
 export class AppComponent {
   title = 'Techno Fit';
