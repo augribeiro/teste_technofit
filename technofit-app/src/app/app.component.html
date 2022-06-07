@@ -4,15 +4,17 @@
     <div class="box__form__field">
       <label for="email" class="box__form--label">Email</label>
       <input id="email" type="email" class="box__form--input" formControlName="email">
+      <tf-error-text [control]="formLogin.controls.email"></tf-error-text>
     </div>
     <div class="box__form__field">
       <label for="password" class="box__form--label">Senha</label>
       <input id="password" type="password" class="box__form--input" formControlName="password">
+      <tf-error-text [control]="formLogin.controls.password"></tf-error-text>
     </div>
 
     <input type="checkbox" class="checkbox" formControlName="rememberMe">
     <label for="rememberMe">Eu voltarei......</label>
 
-    <button class="button" type="submit">Login</button>
+    <button class="button" type="submit" [disabled]="!formLogin.valid">Login</button>
   </form>
 </div>

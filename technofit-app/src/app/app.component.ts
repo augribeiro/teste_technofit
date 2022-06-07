@@ -5,12 +5,12 @@ import { HttpService } from './http.service';
 import { LoginRequestModel } from './model/login-request.model';
 
 @Component({
-  selector: 'app-root',
+  selector: 'tf-root',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.sass'],
 })
 export class AppComponent {
-  title = 'technofit-app';
+  title = 'Techno Fit';
 
   formLogin = this.formBuilder.group({
     email: new FormControl('', [Validators.required, Validators.email]),
