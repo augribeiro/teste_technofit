@@ -22,12 +22,15 @@ export class AppComponent {
     private formBuilder: FormBuilder,
     private httpService: HttpService
   ) {
-
+    // try using cubic-bezier formula for the checkbox checked state
   }
 
   onSubmit() {
     // open modal with returned message
-    const body = new LoginRequestModel(this.formLogin.value["email"], this.formLogin.value["password"]);
+    const body = {
+      email: this.formLogin.value["email"],
+      password: this.formLogin.value["password"]
+    }
 
     this.httpService.authenticate(body).subscribe((data) => {
       console.log(data);
