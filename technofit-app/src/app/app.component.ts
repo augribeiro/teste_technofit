@@ -11,6 +11,8 @@ import { LoginRequestModel } from './model/login-request.model';
 })
 export class AppComponent {
   title = 'Techno Fit';
+  showModal = false;
+  modalText = '';
 
   formLogin = this.formBuilder.group({
     email: new FormControl('', [Validators.required, Validators.email]),
@@ -26,17 +28,26 @@ export class AppComponent {
   }
 
   onSubmit() {
-    // open modal with returned message
     const body = {
       email: this.formLogin.value["email"],
       password: this.formLogin.value["password"]
     }
 
     this.httpService.authenticate(body).subscribe((data) => {
-      console.log(data);
-    });
+      debugger
+      this.showModal = true;
+      this.modalText = data;
+    },
+      error => {
+        this.showModal = true;
+        this.modalText = error.error.error; // ????
+      });
 
     console.log(this.formLogin)
     this.formLogin.reset();
+  }
+
+  closeModal() {
+    this.showModal = false;
   }
 }

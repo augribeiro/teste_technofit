@@ -1,3 +1,12 @@
+<ng-container *ngIf="showModal">
+  <div class="modal">
+    <div class="modal__text">
+      {{ modalText }}
+    </div>
+    <button (click)="closeModal()" class="button modal__btn">Ação</button>
+  </div>
+  <div class="overlay"></div>
+</ng-container>
 <div class="box">
   <h1>Techno Fit</h1>
   <form [formGroup]="formLogin" (ngSubmit)="onSubmit()" class="box__form">
@@ -18,4 +27,5 @@
 
     <button class="button" type="submit" [disabled]="!formLogin.valid">Login</button>
   </form>
+  <a href="#" class="link">Esqueci minha senha</a>
 </div>
