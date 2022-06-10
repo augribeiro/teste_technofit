@@ -1,0 +1,30 @@
+<ng-container *ngIf="showModal">
+  <div class="modal">
+    <div class="modal__text">
+      {{ modalText }}
+    </div>
+    <button (click)="closeModal()" class="button modal__btn">Fechar</button>
+  </div>
+  <div class="overlay"></div>
+</ng-container>
+<div class="box">
+  <h1>Techno Fit</h1>
+  <form [formGroup]="formLogin" (ngSubmit)="onSubmit()" class="box__form">
+    <div class="box__form__field">
+      <input id="email" autocomplete="off" type="email" class="box__form--input" placeholder="Email"
+        formControlName="email">
+      <label for="email" class="box__form--label">Email</label>
+      <tf-error-text class="error" [control]="formLogin.controls.email"></tf-error-text>
+    </div>
+    <div class="box__form__field">
+      <input id="password" type="password" class="box__form--input" placeholder="Senha" formControlName="password">
+      <label for="password" class="box__form--label">Senha</label>
+      <tf-error-text class="error" [control]="formLogin.controls.password"></tf-error-text>
+    </div>
+
+    <input type="checkbox" class="checkbox" formControlName="rememberMe">
+    <label for="rememberMe">Eu voltarei......</label>
+
+    <button class="button" type="submit" [disabled]="!formLogin.valid">Login</button>
+  </form>
+</div>
