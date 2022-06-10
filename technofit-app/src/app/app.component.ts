@@ -34,9 +34,8 @@ export class AppComponent {
     }
 
     this.httpService.authenticate(body).subscribe((data) => {
-      debugger
       this.showModal = true;
-      this.modalText = data;
+      this.modalText = "Login Sucessful";
     },
       error => {
         this.showModal = true;

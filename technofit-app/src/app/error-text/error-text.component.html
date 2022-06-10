@@ -1,3 +1,3 @@
-<ng-container *ngIf="showText">
-  <span class="error__span">Este campo é obrigatório!</span>
-</ng-container>
+<div class="error" *ngIf="!control.valid && control.touched">
+  <span class="error__span">Este campo está inválido!</span>
+</div>

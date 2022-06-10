@@ -166,3 +166,12 @@ h1 {
   width: 100vw;
   z-index: 1;
 }
+
+.error {
+  transform: translateY(-2.9rem);
+
+  &__span {
+    color: red;
+  }
+
+}
